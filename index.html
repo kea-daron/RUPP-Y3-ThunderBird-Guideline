@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thunderbird Email Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00539f;
+      --secondary: #0177b7;
+      --accent: #c8dff1;
+      --bg: #f9fafb;
+      --text: #333;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .download a {
+      display: inline-block;
+      background: var(--secondary);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .download a:hover {
+      background: var(--primary);
+    }
+
+    .accordion {
+      background: var(--accent);
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .accordion:hover,
+    .accordion.active {
+      background: #b0d3ea;
+    }
+
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background: #fff;
+      padding: 0 1rem;
+      margin-bottom: 10px;
+      border-left: 4px solid var(--secondary);
+      border-radius: 0 0 8px 8px;
+    }
+
+    .panel.open {
+      padding-top: 1rem;
+    }
+
+    .panel p,
+    .panel ul {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+      .section h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Thunderbird Setup for demo@chhunmeyling.com</h1>
+  </header>
+
+  <main>
+
+    <!-- Download -->
+    <section class="section download">
+      <h2>Step 1: Download Thunderbird</h2>
+      <p>Get Thunderbird from the official website below.</p>
+      <a href="https://www.thunderbird.net/" target="_blank">Download Thunderbird</a>
+    </section>
+
+    <!-- Setup -->
+    <section class="section">
+      <h2>Step 2: Email Setup</h2>
+
+      <button class="accordion">Install Thunderbird</button>
+      <div class="panel">
+        <p>Run the installer and follow the prompts to install.</p>
+      </div>
+
+      <button class="accordion">Open and Add Account</button>
+      <div class="panel">
+        <p>Open Thunderbird and select "Set up an existing email account".</p>
+      </div>
+
+      <button class="accordion">Enter Email Credentials</button>
+      <div class="panel">
+        <p>
+          <strong>Your Name:</strong> Demo User<br/>
+          <strong>Email:</strong> demo@chhunmeyling.com<br/>
+          <strong>Password:</strong> [Your Password]
+        </p>
+      </div>
+
+      <button class="accordion">Manual Server Configuration</button>
+      <div class="panel">
+        <ul>
+          <li><strong>Incoming:</strong> IMAP, mail.chhunmeyling.com, Port: 993, SSL/TLS</li>
+          <li><strong>Outgoing:</strong> SMTP, mail.chhunmeyling.com, Port: 465, SSL/TLS</li>
+          <li><strong>Username:</strong> demo@chhunmeyling.com</li>
+        </ul>
+      </div>
+
+      <button class="accordion">Finish Setup</button>
+      <div class="panel">
+        <p>Click "Done" and Thunderbird will complete the setup.</p>
+      </div>
+    </section>
+
+    <!-- Test Email -->
+    <section class="section">
+      <h2>Step 3: Test Email</h2>
+
+      <button class="accordion">Send a Test Email</button>
+      <div class="panel">
+        <p>Click "Write", send an email to yourself, and verify receipt.</p>
+      </div>
+
+      <button class="accordion">Check Inbox</button>
+      <div class="panel">
+        <p>If the email appears in your Inbox, everything is working.</p>
+      </div>
+    </section>
+
+    <!-- Other Features -->
+    <section class="section">
+      <h2>Step 4: Explore Features</h2>
+
+      <button class="accordion">Add Email Signature</button>
+      <div class="panel">
+        <p>Go to "Account Settings" > "Signature" to set your signature.</p>
+      </div>
+
+      <button class="accordion">Create Folders</button>
+      <div class="panel">
+        <p>Right-click your account > New Folder to organize your inbox.</p>
+      </div>
+
+      <button class="accordion">Use Filters</button>
+      <div class="panel">
+        <p>Use "Message Filters" to auto-organize emails by subject, sender, etc.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const acc = document.querySelectorAll('.accordion');
+    acc.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.classList.remove('open');
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
